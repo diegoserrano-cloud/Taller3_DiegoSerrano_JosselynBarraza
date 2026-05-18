@@ -19,7 +19,110 @@ public class App {
 	public static void main(String[] args) throws IOException {
 		lectura_Hechizos();
 		lectura_Magos();
+		Menu_Principal();
 		
+	}
+	private static void Menu_Principal() {
+		
+		int op;
+		do {
+			System.out.println("Seleccione el menù que desea ejecutar: \n" +
+					   "1. Administrador\n"+ "2. Analista\n"+ "3. Salir");
+			op = validacionOP("> ");
+			System.out.println();
+			switch(op){
+			case 1:
+				Menu_administrador();
+				break;
+			case 2:
+				menu_Analista();
+				break;
+			}
+			if(op!=3) {
+				System.out.println("Opciòn invalida");
+				System.out.println();
+			}
+			
+		}while(op!= 3);
+		
+	}
+
+	private static void Menu_administrador() {
+		int op;
+		do {
+			System.out.println("1. Agregar Mago\n"
+					+ "2. Modificar Mago\n"
+					+ "3. Eliminar Mago\n"
+					+ "4. Agregar Hechizo\n"
+					+ "5. Modificar Hechizo\n"
+					+ "6. Eliminar Hechizo\n"
+					+ "7. Salir");
+			op = validacionOP("Ingrese la opciòn que desea realizar: ");
+			System.out.println();
+			switch(op) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4: 
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+			}
+			if(op != 7) {
+				System.out.println("Opciòn invalida");
+				System.out.println();
+			}
+		}while(op!= 7);
+	}
+	private static void menu_Analista() {
+		int op;
+		do {
+			System.out.println("1. Top 10 Mejores Hechizos\n"
+					+ "2. Top 3 Mejores Magos\n"
+					+ "3. Mostrar todos los Hechizos\n"
+					+ "4. Mostrar todos los magos\n"
+					+ "5. Mostrar todos los Hechizos junto a su puntuacion\n"
+					+ "6. Mostrar todos los magos junto a su puntuacion\n"
+					+ "7. Salir");
+			op = validacionOP("Ingrese la opciòn que desea realizar: ");
+			System.out.println();
+			switch(op) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4: 
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+			}
+			if(op != 7) {
+				System.out.println("Opciòn invalida");
+				System.out.println();
+			}
+		}while(op!= 7);
+		
+	}
+	public static int validacionOP(String mg) {
+		System.out.print(mg);
+		while (true) {
+			try {
+				return Integer.parseInt(sc.nextLine().trim());
+				
+	        } catch (NumberFormatException e) {
+	            System.out.print("Ingrese un número válido: ");
+	            System.out.println();
+	        }		
+		}
 	}
 	private static void lectura_Hechizos() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader("Hechizos.txt"));
