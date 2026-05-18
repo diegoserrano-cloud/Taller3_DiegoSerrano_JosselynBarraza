@@ -1,0 +1,25 @@
+package dominio;
+
+public class Planta extends Hechizo{
+	private int duracionStun;
+	private int cantPlantas;
+	public Planta(String nombreHechizo, String tipo, int daño, int duracionStun,int cantPlantas) {
+		super(nombreHechizo, tipo, daño);
+		this.cantPlantas = cantPlantas;
+		this.duracionStun = duracionStun;
+	}
+	public int getDuracionStun() {
+		return duracionStun;
+	}
+	public void setDuracionStun(int duracionStun) {
+		this.duracionStun = duracionStun;
+	}
+	public int getCantPlantas() {
+		return cantPlantas;
+	}
+	public void setCantPlantas(int cantPlantas) {
+		this.cantPlantas = cantPlantas;
+	}
+	
+	
+}
