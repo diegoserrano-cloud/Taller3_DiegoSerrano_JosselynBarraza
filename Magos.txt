@@ -1,16 +1,16 @@
-Pruno;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Ferran;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Sasa;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Mul;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Branco;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-MartinNegro;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-EmaArdillaRabiosa;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Danini;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Maxi;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-MartinAyudanteHermoso;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Estefania;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Churrasquita;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Clapt;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Rabi;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Nilo;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
-Papulini;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Pruno;Fuego Sagrado|Absorber|Infierno
+Ferran;Fuego Sagrado|Absorber|Infierno
+Sasa;Fuego Sagrado|Absorber|Infierno
+Mul;Fuego Sagrado|Absorber|Infierno
+Branco;Fuego Sagrado|Absorber|Infierno
+MartinNegro;Fuego Sagrado|Absorber|Infierno
+EmaArdillaRabiosa;Fuego Sagrado|Absorber|Infierno
+Danini;Fuego Sagrado|Absorber|Infierno
+Maxi;Fuego Sagrado|Absorber|Infierno
+MartinAyudanteHermoso;Fuego Sagrado|Absorber|Infierno
+Estefania;Fuego Sagrado|Absorber|Infierno
+Churrasquita;Fuego Sagrado|Absorber|Infierno
+Clapt;Fuego Sagrado|Absorber|Infierno
+Rabi;Fuego Sagrado|Absorber|Infierno
+Nilo;Fuego Sagrado|Absorber|Infierno
+Papulini;Fuego Sagrado|Absorber|Infierno

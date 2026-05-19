@@ -7,4 +7,7 @@ public interface Sistema {
 	Hechizo encontrarHechizo(String nombre);
 	void agregarMago(String nombre, String Hechizoos);
 	void Guardar_Cambios();
+	int mostrarMagos();
+	void modificar_Mago();
+	void eliminar_Mago(int index);
 }

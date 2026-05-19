@@ -91,5 +91,23 @@ public class SistemaImple implements Sistema {
 		}
 		
 	}
+	@Override
+	public int mostrarMagos() {
+		int i = 1;
+		for(Mago m: magos) {
+			System.out.println(i+".-"+ m.getNombre());
+			i++;
+		}System.out.println();
+		return magos.size();
+	}
+	@Override
+	public void modificar_Mago() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void eliminar_Mago(int index) {
+		magos.remove(index - 1);
+	}
 	
 }

@@ -15,6 +15,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+import dominio.Agua;
+import dominio.Fuego;
+import dominio.Planta;
+import dominio.Tierra;
+
 public class App {
 	private static Sistema sis = new SistemaImple();
 	private static Scanner sc = new Scanner(System.in);
@@ -40,10 +45,6 @@ public class App {
 				menu_Analista();
 				break;
 			}
-			if(op!=3) {
-				System.out.println("Opciòn invalida");
-				System.out.println();
-			}
 			
 		}while(op!= 3);	
 	}
@@ -65,23 +66,23 @@ public class App {
 				Agregar_Mago();
 				break;
 			case 2:
+				Modificar_Mago();//terminar
 				break;
 			case 3:
+				Eliminar_Mago();
 				break;
 			case 4: 
+				Agregar_Hechizo();
 				break;
 			case 5:
 				break;
 			case 6:
 				break;
 			}
-			if(op != 7) {
-				System.out.println("Opciòn invalida");
-				System.out.println();
-			}
+			
 		}while(op!= 7);
 	}
-	//Menu administrador: función 1
+	//Menu administrador: función 1 "Agregar mago"
 	private static void Agregar_Mago() {
 		System.out.print("Ingrese el nombre del mago: ");
 		String nombre = sc.nextLine();
@@ -97,6 +98,70 @@ public class App {
 				hechizoos += h;
 			}
 		}sis.agregarMago(nombre, hechizoos);
+	}
+	////Menu administrador: función 2 "Modificar mago"
+	private static void Modificar_Mago() {
+		System.out.println("Qué mago desea modificar(número)? ");
+		int total = sis.mostrarMagos();
+		int opp;
+		System.out.println("El número debe estar señalado anteriormente!!");
+		// evita posiciones fuera del rango
+		do {
+			opp= validacionOP("> ");
+		} while (opp - 1 < 0 || opp - 1 >= total);
+		System.out.println("Que deseas modificar: \n" +
+						   "1. Nombre \n"+
+						   "2. Hechizo ");
+		
+	}
+	//Menu administrador: funcion n°3 "Eliminar Mago"
+	private static void Eliminar_Mago() {
+		System.out.println("Qué mago desea eliminar(número)? ");
+		int total = sis.mostrarMagos();
+		int opp;
+		System.out.println();
+		System.out.println("El número debe estar señalado anteriormente!!");
+		System.out.println();
+		// evita posiciones fuera del rango
+		do {
+		    opp = validacionOP("> ");
+		} while (opp < 1 || opp > total);
+		sis.eliminar_Mago(opp);
+		System.out.println("Mago eliminado!!");
+	}
+	//Menu administrador: funcion n°4 "Agregar Hechizo"
+	private static void Agregar_Hechizo() {
+		//NombreHechizo;Tipo;Daño;...
+		System.out.print("Ingrese el nombre del hechizo: ");
+		String nombreH = sc.nextLine();
+		System.out.print("Ingrese el tipo del hechizo: ");
+		String tipo = sc.nextLine();
+		System.out.print("Ingrese el daño del hechizo: ");
+		String atributo = "";
+		int daño = Integer.parseInt(sc.nextLine());
+		if(tipo.equalsIgnoreCase("Fuego")){
+			System.out.print("Ingrese la duración de quemadura: ");
+			atributo= sc.nextLine();
+
+		}else if(tipo.equalsIgnoreCase("Tierra")){
+			System.out.print("Ingrese la mejor defensa : ");
+			atributo= sc.nextLine();
+
+		}else if(tipo.equalsIgnoreCase("Planta")){
+			System.out.print("Ingrese la Duracion Stun: ");
+			int duracionStun = Integer.parseInt(sc.nextLine());
+			System.out.print("Ingrese la Cantidad de Plantas: ");
+			int cantPlantas = Integer.parseInt(sc.nextLine());
+			atributo = duracionStun+","+cantPlantas;
+			
+		}else if(tipo.equalsIgnoreCase("Agua")){
+			System.out.print("Ingrese la Cantidad Heal: ");
+			int cantidadHeal = Integer.parseInt(sc.nextLine());
+			System.out.print("Ingrese la presion del agua: ");
+			int presionDelAgua = Integer.parseInt(sc.nextLine());
+			atributo = cantidadHeal+","+presionDelAgua;
+		}sis.agregarHechizo(nombreH, tipo, daño, atributo);
+		System.out.println("Hechizo agregado!!");
 	}
 	//Funcion n°2: Menu analista
 	private static void menu_Analista() {
@@ -124,10 +189,6 @@ public class App {
 				break;
 			case 6:
 				break;
-			}
-			if(op != 7) {
-				System.out.println("Opciòn invalida");
-				System.out.println();
 			}
 		}while(op!= 7);
 		
