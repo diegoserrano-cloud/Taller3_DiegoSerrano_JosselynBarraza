@@ -16,6 +16,14 @@ public class Fuego extends Hechizo{
 	public String guardarAtributo() {
 		return String.valueOf(duracionQuemadura);
 	}
+	public int CalculoPuntuacion() {
+		// Daño*DuraciónQuemadura
+		return getDaño()*duracionQuemadura;
+	}
+	@Override
+	public String toString() {
+		return getNombreHechizo()+"|tipo: Fuego";
+	}
 
 	
 	

@@ -26,6 +26,16 @@ public class Planta extends Hechizo{
 	public String guardarAtributo() {
 		return duracionStun+","+cantPlantas;
 	}
+
+	public int CalculoPuntuacion() {
+		// Daño + (DuraciónStun * CantPlanta)
+		return getDaño() + (duracionStun*cantPlantas);
+	}
+
+	@Override
+	public String toString() { 
+		return getNombreHechizo()+"|tipo: Planta";
+	}
 	
 	
 }

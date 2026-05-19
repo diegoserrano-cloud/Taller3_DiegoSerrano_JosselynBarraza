@@ -11,6 +11,8 @@ public abstract class Hechizo {
 		this.daño = daño;
 	}
 	public abstract String guardarAtributo();
+	public abstract int CalculoPuntuacion();
+	
 	public String getNombreHechizo() {
 		return nombreHechizo;
 	}
@@ -29,5 +31,7 @@ public abstract class Hechizo {
 	public void setDaño(int daño) {
 		this.daño = daño;
 	}
+	@Override
+	public abstract String toString();
 	
 }

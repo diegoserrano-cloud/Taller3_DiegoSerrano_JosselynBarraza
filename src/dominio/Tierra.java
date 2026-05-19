@@ -16,5 +16,13 @@ public class Tierra extends Hechizo{
 	public String guardarAtributo() {
 		return String.valueOf(mejoraDefensa);
 	}
+	public int CalculoPuntuacion() {
+		//(Daño*MejoraDefensa)/2
+		return (getDaño()*mejoraDefensa)/2;
+	}
+	@Override
+	public String toString() {
+		return getNombreHechizo()+"|tipo: Tierra";
+	}
 	
 }

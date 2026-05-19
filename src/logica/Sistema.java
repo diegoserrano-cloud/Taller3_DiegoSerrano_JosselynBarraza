@@ -13,4 +13,6 @@ public interface Sistema {
 	int mostrarHechizos();
 	void modificar_Hechizo();
 	void eliminar_Hechizo(int index);
+	void mejoresHechizos();
+	void mejoresMagos();
 }

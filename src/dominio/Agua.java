@@ -24,5 +24,13 @@ public class Agua extends Hechizo{
 	public String guardarAtributo() {
 		return cantidadHeal +","+presionAgua;
 	}
+	public int CalculoPuntuacion() {
+		//(Daño+CantidadHeal+PresionDeAgua)*2
+		return (getDaño()+cantidadHeal+presionAgua)*2;
+	}
+	@Override
+	public String toString() {
+		return getNombreHechizo()+"|tipo: Agua";
+	}
 	
 }

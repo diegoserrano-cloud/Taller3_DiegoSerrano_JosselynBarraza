@@ -207,8 +207,10 @@ public class App {
 			System.out.println();
 			switch(op) {
 			case 1:
+				sis.mejoresHechizos();
 				break;
 			case 2:
+				sis.mejoresMagos();
 				break;
 			case 3:
 				break;
@@ -222,6 +224,7 @@ public class App {
 		}while(op!= 7);
 		
 	}
+	
 	//controla los errores
 	public static int validacionOP(String mg) {
 		System.out.print(mg);

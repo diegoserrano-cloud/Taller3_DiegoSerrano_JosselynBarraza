@@ -56,6 +56,7 @@ public class SistemaImple implements Sistema {
 			Hechizo he= encontrarHechizo(partes[i]);//buscamos hechizo
 			if(he!= null) {
 				m.getH().add(he);
+				m.setSuma(he.CalculoPuntuacion());
 			}else {
 				System.out.println("No se encontro: "+ partes[i]);
 			}
@@ -125,6 +126,56 @@ public class SistemaImple implements Sistema {
 	@Override
 	public void eliminar_Hechizo(int index) {
 		hechizos.remove(index-1);
+	}
+	@Override
+	public void mejoresHechizos() {
+		ArrayList<Hechizo> top10 = new ArrayList<>();
+
+		for (int i = 0; i < 10; i++) {
+
+		    int mayor = -1;
+		    Hechizo mejor = null;
+
+		    for (Hechizo h : hechizos) {
+
+		        if (h.CalculoPuntuacion() > mayor && !top10.contains(h)) {
+		            mayor = h.CalculoPuntuacion();
+		            mejor = h;
+		        }
+		    }
+		    if (mejor != null) {
+		        top10.add(mejor);
+		    }
+		}System.out.println("Top "+top10.size()+" mejores hechizos son: ");	
+		int i = 1;
+		for(Hechizo hh: top10) {
+			System.out.print(i+".- "+hh+"|puntuaciòn: "+hh.CalculoPuntuacion());
+			System.out.println();
+			i++;
+		}System.out.println();
+	}
+	public void mejoresMagos() {
+		ArrayList<Mago> top3 = new ArrayList<>();
+
+		for (int i = 0; i < 3; i++) {
+		    int mayor = -1;
+		    Mago mejor = null;
+		    for (Mago m : magos) {
+		    		if (m != null && m.getSuma() > mayor && !top3.contains(m)) {
+		            mayor = m.getSuma();
+		            mejor = m;
+		        }
+		    }
+		    if (mejor != null) {
+		        top3.add(mejor);
+		    }
+		}System.out.println("Top "+top3.size()+" mejores magos son: ");	
+		int j = 1;
+		for(Mago mm: top3) {
+			System.out.print(j+".- "+mm+"puntuaciòn: "+mm.getSuma());
+			System.out.println();
+			j++;
+		}System.out.println();
 	}
 	
 	
