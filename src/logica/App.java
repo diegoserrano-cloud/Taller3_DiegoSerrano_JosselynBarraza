@@ -9,7 +9,9 @@
 package logica;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -20,10 +22,10 @@ public class App {
 		lectura_Hechizos();
 		lectura_Magos();
 		Menu_Principal();
+		sis.Guardar_Cambios();
 		
 	}
-	private static void Menu_Principal() {
-		
+	private static void Menu_Principal() {	
 		int op;
 		do {
 			System.out.println("Seleccione el menù que desea ejecutar: \n" +
@@ -43,10 +45,9 @@ public class App {
 				System.out.println();
 			}
 			
-		}while(op!= 3);
-		
+		}while(op!= 3);	
 	}
-
+	//Funcion n°1 = Menu administrador
 	private static void Menu_administrador() {
 		int op;
 		do {
@@ -61,6 +62,7 @@ public class App {
 			System.out.println();
 			switch(op) {
 			case 1:
+				Agregar_Mago();
 				break;
 			case 2:
 				break;
@@ -79,6 +81,24 @@ public class App {
 			}
 		}while(op!= 7);
 	}
+	//Menu administrador: función 1
+	private static void Agregar_Mago() {
+		System.out.print("Ingrese el nombre del mago: ");
+		String nombre = sc.nextLine();
+		System.out.println();
+		int cantHechizos = validacionOP("Cuantos hechizos desea registrar(numero): ");
+		String hechizoos = "";
+		for(int j = 0; j< cantHechizos; j++) {//le pide el nombre de los hechizos(YA CREADOS)
+			System.out.print("Ingrese el nombre del hechizo: ");
+			String h = sc.nextLine();
+			if(j < cantHechizos-1) {
+				hechizoos += h+"|";
+			}else {
+				hechizoos += h;
+			}
+		}sis.agregarMago(nombre, hechizoos);
+	}
+	//Funcion n°2: Menu analista
 	private static void menu_Analista() {
 		int op;
 		do {
@@ -112,6 +132,7 @@ public class App {
 		}while(op!= 7);
 		
 	}
+	//controla los errores
 	public static int validacionOP(String mg) {
 		System.out.print(mg);
 		while (true) {
@@ -124,6 +145,7 @@ public class App {
 	        }		
 		}
 	}
+	//lee Hechizos.txt
 	private static void lectura_Hechizos() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader("Hechizos.txt"));
 		String linea;
@@ -137,13 +159,14 @@ public class App {
 			sis.agregarHechizo(nombreHechizo, tipo, daño, atributo);
 		}br.close();
 	}
+	//lee Magos.txt
 	private static void lectura_Magos() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader("Magos.txt"));
 		String linea;
 		while ((linea = br.readLine()) != null) {
 			String[] partes = linea.split("\\s*;\\s*");
 			sis.agregarMago(partes[0], partes[1]);
-		}
+		}br.close();
 		
 	}
 }

@@ -20,5 +20,9 @@ public class Agua extends Hechizo{
 	public void setPresionAgua(int presionAgua) {
 		this.presionAgua = presionAgua;
 	}
+	@Override
+	public String guardarAtributo() {
+		return cantidadHeal +","+presionAgua;
+	}
 	
 }

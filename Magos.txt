@@ -1,16 +1,16 @@
-Pruno;Sofoco|Disparo Lodo|Pirotecnia|Vórtice Ígneo
-Ferran;Salmuera|Envite Igneo|Disparo Lodo|Poder Pasado|Rueda Fuego|Hidroariete|Burbuja
-Sasa;Infierno|Martillazo|Hidroariete|Envite Igneo
-Mul;Gigadrenado|Rayo Burbuja|Danza Lluvia|Pistola Agua
-Branco;Arraigo|Silvato|Danza Lluvia
-MartinNegro;Acua Aro|Tumba Rocas|Polen Somnífero|Escaldar|Disparo Lodo|Cascada|Pirotecnia
-EmaArdillaRabiosa;Origen Pulso|Fuego Sagrado|Cascada|Llamarada Azul
-Danini;Fuego Sagrado|Pedrada|Envite Igneo|Hierba Lazo|Surf
-Maxi;Explosión Ígnea|Envite Igneo|Agua Lodosa
-MartinAyudanteHermoso;Disparo Lodo|Salmuera|Colmillo Igneo|Excavar|Calcinación
-Estefania;Hoja Afilada|Burbuja|Acua Jet|Energibola|Fuego Sagrado|Agua Lodosa|Llamarada Azul
-Churrasquita;Origen Pulso|Infierno|Silvato|Hoja Mágica|Colmillo Igneo
-Clapt;Pulso de Agua|Giro Fuego|Pedrada
-Rabi;Latigazo|Absorber|Vórtice Ígneo|Avalancha|Rueda Fuego|Tormenta de Arena
-Nilo;Patada Ígnea|Acua Jet|Huesomerang|Clorofila|Fogonazo|Polen Somnífero|Torbellino
-Papulini;Fuego Sagrado|Absorber|Infierno
+Pruno;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Ferran;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Sasa;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Mul;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Branco;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+MartinNegro;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+EmaArdillaRabiosa;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Danini;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Maxi;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+MartinAyudanteHermoso;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Estefania;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Churrasquita;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Clapt;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Rabi;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Nilo;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación
+Papulini;Bofetón Lodo|Muro de Arena|Clorofila|Energibola|Calcinación

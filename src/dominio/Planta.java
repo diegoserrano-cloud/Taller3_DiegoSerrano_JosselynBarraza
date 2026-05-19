@@ -8,6 +8,7 @@ public class Planta extends Hechizo{
 		this.cantPlantas = cantPlantas;
 		this.duracionStun = duracionStun;
 	}
+	
 	public int getDuracionStun() {
 		return duracionStun;
 	}
@@ -19,6 +20,11 @@ public class Planta extends Hechizo{
 	}
 	public void setCantPlantas(int cantPlantas) {
 		this.cantPlantas = cantPlantas;
+	}
+
+	@Override
+	public String guardarAtributo() {
+		return duracionStun+","+cantPlantas;
 	}
 	
 	

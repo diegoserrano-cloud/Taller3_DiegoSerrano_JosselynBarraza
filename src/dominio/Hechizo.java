@@ -10,6 +10,7 @@ public abstract class Hechizo {
 		this.tipo = tipo;
 		this.daño = daño;
 	}
+	public abstract String guardarAtributo();
 	public String getNombreHechizo() {
 		return nombreHechizo;
 	}

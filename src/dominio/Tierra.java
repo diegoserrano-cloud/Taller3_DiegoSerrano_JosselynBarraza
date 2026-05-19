@@ -12,5 +12,9 @@ public class Tierra extends Hechizo{
 	public void setMejoraDefensa(int mejoraDefensa) {
 		this.mejoraDefensa = mejoraDefensa;
 	}
+	@Override
+	public String guardarAtributo() {
+		return String.valueOf(mejoraDefensa);
+	}
 	
 }
