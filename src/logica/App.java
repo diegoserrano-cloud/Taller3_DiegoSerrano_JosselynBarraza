@@ -75,11 +75,12 @@ public class App {
 				Agregar_Hechizo();
 				break;
 			case 5:
+				Modificar_hechizo();//terminar
 				break;
 			case 6:
+				Eliminar_Hechizo();
 				break;
-			}
-			
+			}	
 		}while(op!= 7);
 	}
 	//Menu administrador: función 1 "Agregar mago"
@@ -162,6 +163,34 @@ public class App {
 			atributo = cantidadHeal+","+presionDelAgua;
 		}sis.agregarHechizo(nombreH, tipo, daño, atributo);
 		System.out.println("Hechizo agregado!!");
+	}
+	//Menu adminitrador: funcion n°5 "Modificar Hechizo"
+	private static void Modificar_hechizo() {
+		System.out.println("Qué hechizo desea modificar(número)? ");
+		int total = sis.mostrarHechizos();
+		int opp;
+		System.out.println("El número debe estar señalado anteriormente!!");
+		// evita posiciones fuera del rango
+		do {
+			opp= validacionOP("> ");
+		} while (opp - 1 < 0 || opp - 1 >= total);
+		System.out.println("Que deseas modificar: \n");
+		
+	}
+	//Menu administrador: funcion n°6 "Eliminar Hechizo"
+	private static void Eliminar_Hechizo() {
+		System.out.println("Qué hechizo desea eliminar(número)? ");
+		int total = sis.mostrarHechizos();
+		int opp;
+		System.out.println();
+		System.out.println("El número debe estar señalado anteriormente!!");
+		
+		// evita posiciones fuera del rango
+		do {
+		    opp = validacionOP("> ");
+		} while (opp < 1 || opp > total);
+		sis.eliminar_Hechizo(opp);
+		System.out.println("Hechizo eliminado!!");
 	}
 	//Funcion n°2: Menu analista
 	private static void menu_Analista() {

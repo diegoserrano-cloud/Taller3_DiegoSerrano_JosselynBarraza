@@ -95,7 +95,7 @@ public class SistemaImple implements Sistema {
 	public int mostrarMagos() {
 		int i = 1;
 		for(Mago m: magos) {
-			System.out.println(i+".-"+ m.getNombre());
+			System.out.println(i+".-"+ m.getNombre());//en esta parte podría ser un toString
 			i++;
 		}System.out.println();
 		return magos.size();
@@ -109,5 +109,23 @@ public class SistemaImple implements Sistema {
 	public void eliminar_Mago(int index) {
 		magos.remove(index - 1);
 	}
+	public int mostrarHechizos() {
+		int j = 1;
+		for(Hechizo h: hechizos) {
+			System.out.println(j+".-"+h.getNombreHechizo());//en esta parte podría ser un toString
+			j++;
+		}
+		return hechizos.size();
+	}
+	@Override
+	public void modificar_Hechizo() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void eliminar_Hechizo(int index) {
+		hechizos.remove(index-1);
+	}
+	
 	
 }

@@ -10,4 +10,7 @@ public interface Sistema {
 	int mostrarMagos();
 	void modificar_Mago();
 	void eliminar_Mago(int index);
+	int mostrarHechizos();
+	void modificar_Hechizo();
+	void eliminar_Hechizo(int index);
 }
