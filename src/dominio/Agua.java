@@ -1,6 +1,6 @@
 package dominio;
 
-public class Agua extends Hechizo{
+public class Agua extends Hechizo {
 	private int cantidadHeal;
 	private int presionAgua;
 	public Agua(String nombreHechizo, String tipo, int daño, int cantidadHeal, int presionAgua) {
@@ -31,6 +31,11 @@ public class Agua extends Hechizo{
 	@Override
 	public String toString() {
 		return getNombreHechizo()+"|tipo: Agua";
+	}
+	@Override
+	public void modificarAtributo(String nuevoValor) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

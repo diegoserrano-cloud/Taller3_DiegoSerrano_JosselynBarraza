@@ -36,6 +36,12 @@ public class Planta extends Hechizo{
 	public String toString() { 
 		return getNombreHechizo()+"|tipo: Planta";
 	}
+
+	@Override
+	public void modificarAtributo(String nuevoValor) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

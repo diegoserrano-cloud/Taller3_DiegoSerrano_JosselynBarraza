@@ -6,6 +6,7 @@ public class Mago {
 	private ArrayList<Hechizo> h;
 	private String nombre;
 	private int suma = 0;
+	
 	public Mago(String nombre) {
 		this.nombre = nombre;
 		this.h= new ArrayList<>();
@@ -23,15 +24,25 @@ public class Mago {
 	public int getSuma() {
 		return suma;
 	}
-	public void setSuma(int suma) {
-		this.suma += suma;
-	}
+	public void agregarPuntuacion(int valor) {
+        this.suma += valor;
+    }
+	public void restarPuntuacion(int valor) {
+        this.suma -= valor;
+    }
+	public void recalcularPuntuacion() {
+        this.suma = 0;
+        for (Hechizo hechizo : h) {
+            this.suma += hechizo.CalculoPuntuacion();
+        }
+    }
+
 	public void setH(ArrayList<Hechizo> h) {
 		this.h = h;
 	}
 	@Override
 	public String toString() {
-		return nombre+"|";
+		return nombre+" |";
 	}
 	
 }

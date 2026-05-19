@@ -24,6 +24,11 @@ public class Fuego extends Hechizo{
 	public String toString() {
 		return getNombreHechizo()+"|tipo: Fuego";
 	}
+	@Override
+	public void modificarAtributo(String nuevoValor) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	
 	

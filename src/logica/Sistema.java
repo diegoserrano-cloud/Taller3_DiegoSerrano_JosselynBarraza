@@ -8,10 +8,10 @@ public interface Sistema {
 	void agregarMago(String nombre, String Hechizoos);
 	void Guardar_Cambios();
 	int mostrarMagos();
-	void modificar_Mago();
+	void modificar_Mago(int index, int opcion, String nuevoValor);
 	void eliminar_Mago(int index);
 	int mostrarHechizos();
-	void modificar_Hechizo();
+	void modificar_Hechizo(int index, String campo, String nuevoValor);
 	void eliminar_Hechizo(int index);
 	void mejoresHechizos();
 	void mejoresMagos();

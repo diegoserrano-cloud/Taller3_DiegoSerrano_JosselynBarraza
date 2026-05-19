@@ -4,12 +4,14 @@ public abstract class Hechizo {
 	private String nombreHechizo;
 	private String tipo;
 	private	int daño;
+	
 	public Hechizo(String nombreHechizo, String tipo, int daño) {
 		super();
 		this.nombreHechizo = nombreHechizo;
 		this.tipo = tipo;
 		this.daño = daño;
 	}
+	
 	public abstract String guardarAtributo();
 	public abstract int CalculoPuntuacion();
 	
@@ -33,5 +35,7 @@ public abstract class Hechizo {
 	}
 	@Override
 	public abstract String toString();
+	
+	public abstract void modificarAtributo(String nuevoValor);
 	
 }

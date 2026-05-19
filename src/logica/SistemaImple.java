@@ -56,11 +56,12 @@ public class SistemaImple implements Sistema {
 			Hechizo he= encontrarHechizo(partes[i]);//buscamos hechizo
 			if(he!= null) {
 				m.getH().add(he);
-				m.setSuma(he.CalculoPuntuacion());
+				m.agregarPuntuacion(he.CalculoPuntuacion());
 			}else {
 				System.out.println("No se encontro: "+ partes[i]);
 			}
-		}magos.add(m);
+		}
+		magos.add(m);
 	}
 	public void Guardar_Cambios() {
 		try {
@@ -102,8 +103,40 @@ public class SistemaImple implements Sistema {
 		return magos.size();
 	}
 	@Override
-	public void modificar_Mago() {
-		// TODO Auto-generated method stub
+	public void modificar_Mago(int index, int opcion, String nuevoValor) {
+		Mago m = magos.get(index - 1);
+        if (opcion == 1) {
+            // Modificar nombre
+            m.setNombre(nuevoValor);
+            System.out.println("Nombre modificado correctamente.");
+        } else if (opcion == 2) {
+            // nuevoValor tiene formato "hechizoViejo,hechizoNuevo"
+            String[] partes = nuevoValor.split(",");
+            String hechizoViejo = partes[0].trim();
+            String hechizoNuevo = partes[1].trim();
+            Hechizo heNuevo = encontrarHechizo(hechizoNuevo);
+            if (heNuevo == null) {
+                System.out.println("El hechizo '" + hechizoNuevo + "' no existe en el catálogo.");
+                return;
+            }
+            ArrayList<Hechizo> lista = m.getH();
+            boolean encontrado = false;
+            for (int i = 0; i < lista.size(); i++) {
+                if (lista.get(i).getNombreHechizo().equalsIgnoreCase(hechizoViejo)) {
+                    // Restar puntuación vieja y sumar nueva
+                    m.restarPuntuacion(lista.get(i).CalculoPuntuacion());
+                    lista.set(i, heNuevo);
+                    m.agregarPuntuacion(heNuevo.CalculoPuntuacion());
+                    encontrado = true;
+                    break;
+                }
+            }
+            if (encontrado) {
+                System.out.println("Hechizo reemplazado correctamente.");
+            } else {
+                System.out.println("El mago no tiene ese hechizo.");
+            }
+        }
 		
 	}
 	@Override
@@ -116,11 +149,31 @@ public class SistemaImple implements Sistema {
 			System.out.println(j+".-"+h.getNombreHechizo());//en esta parte podría ser un toString
 			j++;
 		}
+		System.out.println();
 		return hechizos.size();
 	}
 	@Override
-	public void modificar_Hechizo() {
-		// TODO Auto-generated method stub
+	public void modificar_Hechizo(int index, String campo, String nuevoValor) {
+		Hechizo h = hechizos.get(index - 1);
+        switch (campo.toLowerCase()) {
+            case "nombre":
+                h.setNombreHechizo(nuevoValor);
+                break;
+            case "daño":
+                h.setDaño(Integer.parseInt(nuevoValor));
+                break;
+            case "atributo":
+                h.modificarAtributo(nuevoValor);
+                break;
+            default:
+                System.out.println("Campo no reconocido.");
+                return;
+        }
+        // Recalcular puntuación de todos los magos que tienen este hechizo
+        for (Mago m : magos) {
+            m.recalcularPuntuacion();
+        }
+        System.out.println("Hechizo modificado correctamente.");
 		
 	}
 	@Override

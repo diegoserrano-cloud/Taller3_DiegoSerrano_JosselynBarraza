@@ -24,5 +24,10 @@ public class Tierra extends Hechizo{
 	public String toString() {
 		return getNombreHechizo()+"|tipo: Tierra";
 	}
+	@Override
+	public void modificarAtributo(String nuevoValor) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
