@@ -39,9 +39,8 @@ public class Planta extends Hechizo{
 
 	@Override
 	public void modificarAtributo(String nuevoValor) {
-		// TODO Auto-generated method stub
-		
+		String[] p = nuevoValor.split(",");
+	    this.duracionStun = Integer.parseInt(p[0]);
+	    this.cantPlantas  = Integer.parseInt(p[1]);	
 	}
-	
-	
 }

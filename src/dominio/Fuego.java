@@ -26,8 +26,7 @@ public class Fuego extends Hechizo{
 	}
 	@Override
 	public void modificarAtributo(String nuevoValor) {
-		// TODO Auto-generated method stub
-		
+		 this.duracionQuemadura = Integer.parseInt(nuevoValor);
 	}
 
 	

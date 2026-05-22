@@ -236,12 +236,16 @@ public class App {
 				sis.mejoresMagos();
 				break;
 			case 3:
+				sis.mostrarHechizos();
 				break;
 			case 4:
+				sis.mostrarMagos();
 				break;
 			case 5:
+				sis.mostrarHechizosConPuntuacion();
 				break;
 			case 6:
+				sis.mostrarMagosConPuntuacion();
 				break;
 			}
 		} while (op != 7);

@@ -231,5 +231,24 @@ public class SistemaImple implements Sistema {
 		}System.out.println();
 	}
 	
+	@Override
+    public void mostrarMagosConPuntuacion() {
+        System.out.println("=== Todos los Magos con Puntuación ===");
+        for (Mago m : magos) {
+            System.out.println("- " + m.getNombre() + " | Puntuación: " + m.getSuma());
+        }
+        System.out.println();
+    }
+
+    @Override
+    public void mostrarHechizosConPuntuacion() {
+        System.out.println("=== Todos los Hechizos con Puntuación ===");
+        for (Hechizo h : hechizos) {
+            System.out.println("- " + h + " | Puntuación: " + h.CalculoPuntuacion());
+        }
+        System.out.println();
+    }
+
+	
 	
 }

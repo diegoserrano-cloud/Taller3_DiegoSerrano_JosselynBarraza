@@ -34,7 +34,9 @@ public class Agua extends Hechizo {
 	}
 	@Override
 	public void modificarAtributo(String nuevoValor) {
-		// TODO Auto-generated method stub
+		String[] p = nuevoValor.split(",");
+	    this.cantidadHeal = Integer.parseInt(p[0]);
+	    this.presionAgua  = Integer.parseInt(p[1]);
 		
 	}
 	
