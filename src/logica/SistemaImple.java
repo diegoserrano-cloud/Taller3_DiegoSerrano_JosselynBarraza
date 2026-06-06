@@ -68,6 +68,7 @@ public class SistemaImple implements Sistema {
 			BufferedWriter bw = new BufferedWriter(new FileWriter("Magos.txt", false));
 			//mantenemos formato de Magos: NombreMago;Hechizo 1|Hechizo 2|Hechizo N...
 			for(Mago m: magos) {
+				if (m.getH().isEmpty()) continue; //Por si un mago no tiene hechizos, no lo guardamos.
 				bw.write(m.getNombre()+";");
 				for(int k = 0; k< m.getH().size(); k++) {
 					String nombreH = m.getH().get(k).getNombreHechizo();
@@ -178,7 +179,16 @@ public class SistemaImple implements Sistema {
 	}
 	@Override
 	public void eliminar_Hechizo(int index) {
-		hechizos.remove(index-1);
+		
+		//Está función elimina los hechizos de todos los magos
+		Hechizo aEliminar = hechizos.get(index - 1);
+	    
+	    for (Mago m : magos) {
+	        m.getH().remove(aEliminar);
+	        m.recalcularPuntuacion();
+	    }
+	    hechizos.remove(index - 1);
+	    System.out.println("Hechizo eliminado.");
 	}
 	@Override
 	public void mejoresHechizos() {

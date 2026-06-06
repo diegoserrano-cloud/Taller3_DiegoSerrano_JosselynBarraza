@@ -146,7 +146,7 @@ public class App {
 		String tipo = sc.nextLine();
 		System.out.print("Ingrese el daño del hechizo: ");
 		String atributo = "";
-		int daño = Integer.parseInt(sc.nextLine());
+		int daño = validacionOP("");
 		if (tipo.equalsIgnoreCase("Fuego")) {
 			System.out.print("Ingrese la duración de quemadura: ");
 			atributo = sc.nextLine();
@@ -156,10 +156,10 @@ public class App {
 			atributo = sc.nextLine();
 
 		} else if (tipo.equalsIgnoreCase("Planta")) {
-			System.out.print("Ingrese la Duracion Stun: ");
-			int duracionStun = Integer.parseInt(sc.nextLine());
-			System.out.print("Ingrese la Cantidad de Plantas: ");
-			int cantPlantas = Integer.parseInt(sc.nextLine());
+			
+			int duracionStun = validacionOP("Ingrese la Duracion Stun: ");
+			
+			int cantPlantas  = validacionOP("Ingrese la Cantidad de Plantas: ");
 			atributo = duracionStun + "," + cantPlantas;
 
 		} else if (tipo.equalsIgnoreCase("Agua")) {

@@ -26,7 +26,7 @@ public class Tierra extends Hechizo{
 	}
 	@Override
 	public void modificarAtributo(String nuevoValor) {
-		// TODO Auto-generated method stub
+		this.mejoraDefensa = Integer.parseInt(nuevoValor);
 		
 	}
 	
