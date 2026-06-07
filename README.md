@@ -14,3 +14,43 @@ Para gestionar la información, el sistema almacenará los distintos hechizos y 
 Dentro de las funcionalidades principales se incluirá el cálculo automático de puntuaciones para cada hechizo mediante fórmulas específicas asociadas a su elemento. A partir de estas evaluaciones se calculará la puntuación total de cada mago, obtenida mediante la suma de los puntajes de todos los hechizos que domina. Esta información será utilizada para generar rankings como el Top 10 Mejores Hechizos y el Top 3 Mejores Magos.
 
 Finalmente, se aplicaran conceptos fundamentales de programación, manejo de archivos, persistencia de datos, arreglos y diseño orientado a objetos, desarrollando un sistema funcional que permita administrar y analizar un universo mágico compuesto por magos y hechizos de distintos elementos.
+
+## Integrantes
+- Nombre Completo: Diego Nikolas Serrano Fuentes 
+  - RUT: 22.105.561-6 
+  - GitHub: diegoserrano-cloud
+
+- Nombre Completo: Josselyn Alejandra Barraza Yáñez
+  - RUT: 22.246.539-7
+  - GitHub: josselynbarraza-sys
+
+## Estructura del proyecto
+- Taller3_DiegoSerrano_JosselynBarraza
+    - src
+        - dominio 
+            - Agua.java 
+            - Fuego.java
+            - Hechizo.java # Clase abstract 
+            - Mago.java
+            - Planta.java
+            - Tierra.java
+        - logica
+            - App.java # Clase principal que contiene toda la logica detrás del juego
+            - Sistema.java #Interfaz que separar las funcionalidades de la App
+            - SistemaImple.java #implementación de la Interfaz será el encargado de crear, modificar, hacer calculos con los objetos
+        - module-info.java
+    - .classpath
+    - .proyecto
+    - Hechizos.txt
+    - Magos.txt
+    - README.md
+## Instrucciones
+  - Requisitos previos
+    - Java JDK 11 o superior instalado
+    - Tener algún IDE instalado compatible con java, por ejemplo, Eclipse IDE o Visual Studio Code.
+   
+  - Instrucciones de ejecución
+    - Importar el proyecto dentro del IDE seleccionado.
+    - Seleccionar la carpeta src -> package "Logica" -> Clase "App".
+    - Una vez dentro buscar el boton de "Play".
+    - Disfrutar del juego :D
