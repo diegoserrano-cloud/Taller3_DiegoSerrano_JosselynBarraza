@@ -36,7 +36,7 @@ Finalmente, se aplicaran conceptos fundamentales de programación, manejo de arc
             - Tierra.java
         - logica
             - App.java # Clase principal que contiene toda la logica detrás del juego
-            - Sistema.java #Interfaz que separar las funcionalidades de la App
+            - Sistema.java #Interfaz que separa las funcionalidades de la App
             - SistemaImple.java #implementación de la Interfaz será el encargado de crear, modificar, hacer calculos con los objetos
         - module-info.java
     - .classpath
