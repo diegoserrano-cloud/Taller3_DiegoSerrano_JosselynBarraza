@@ -41,6 +41,7 @@ Finalmente, se aplicaran conceptos fundamentales de programación, manejo de arc
         - module-info.java
     - .classpath
     - .proyecto
+    - DIAGRAMAS_.pdf
     - Hechizos.txt
     - Magos.txt
     - README.md
